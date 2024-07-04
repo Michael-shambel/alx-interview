@@ -7,7 +7,7 @@ lockboxes
 def canUnlockAll(boxes):
     """
     determine if all boxes can be unlocked
-    accepts: lists contain keys and 
+    accepts: lists contain keys and
     return: boolean true if can be unlocked else false
     """
     locked = [False] * len(boxes)
