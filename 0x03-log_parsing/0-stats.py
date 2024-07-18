@@ -21,12 +21,14 @@ def print_stat():
         if status_code_count[code] > 0:
             print(f"{code}: {status_code_count[code]}")
 
+
 def signal_handler(sig, frame):
     """
     Handles the keyboard interrupt signal (CTRL + C).
     """
     print_stat()
     sys.exit(0)
+
 
 signal.signal(signal.SIGINT, signal_handler)
 
