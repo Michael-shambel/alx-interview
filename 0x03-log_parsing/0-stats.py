@@ -53,4 +53,4 @@ for line in sys.stdin:
             print_stat()
     except (IndexError, ValueError):
         continue
-print_stat()
+# print_stat()
