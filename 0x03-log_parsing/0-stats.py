@@ -16,6 +16,7 @@ def print_stat():
     """
     print data of statstics
     """
+    global total_file_size, status_code_count
     print(f"File size: {total_file_size}")
     for code in sorted(status_code_count.keys()):
         if status_code_count[code] > 0:
