@@ -16,22 +16,22 @@ def print_stat():
     """
     print data of statstics
     """
-    global total_file_size, status_code_count
+    # global total_file_size, status_code_count
     print(f"File size: {total_file_size}")
     for code in sorted(status_code_count.keys()):
         if status_code_count[code] > 0:
             print(f"{code}: {status_code_count[code]}")
 
 
-def signal_handler(sig, frame):
-    """
-    Handles the keyboard interrupt signal (CTRL + C).
-    """
-    print_stat()
-    sys.exit(0)
+# def signal_handler(sig, frame):
+#     """
+#     Handles the keyboard interrupt signal (CTRL + C).
+#     """
+#     print_stat()
+#     sys.exit(0)
 
 
-signal.signal(signal.SIGINT, signal_handler)
+# signal.signal(signal.SIGINT, signal_handler)
 
 
 for line in sys.stdin:
