@@ -26,7 +26,7 @@ def signal_handler(sig, frame):
     """
     Handles the keyboard interrupt signal (CTRL + C).
     """
-    print_statistics()
+    print_stat()
     sys.exit(0)
 
 
