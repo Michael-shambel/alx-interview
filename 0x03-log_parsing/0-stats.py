@@ -16,11 +16,19 @@ def print_stat():
     """
     print data of statstics
     """
-    # global total_file_size, status_code_count
     print(f"File size: {total_file_size}")
     for code in sorted(status_code_count.keys()):
         if status_code_count[code] > 0:
             print(f"{code}: {status_code_count[code]}")
+
+def signal_handler(sig, frame):
+    """
+    Handles the keyboard interrupt signal (CTRL + C).
+    """
+    print_stat()
+    sys.exit(0)
+
+signal.signal(signal.SIGINT, signal_handler)
 
 
 for line in sys.stdin:
@@ -28,7 +36,7 @@ for line in sys.stdin:
         parts = line.split()
         if len(parts) != 9:
             continue
-        ip_adress = parts[0]
+        ip_address = parts[0]
         date = parts[2] + " " + parts[3]
         request = parts[4] + " " + parts[5] + " " + parts[6]
         status_code = int(parts[7])
