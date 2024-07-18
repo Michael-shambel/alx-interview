@@ -22,15 +22,15 @@ def print_stat():
             print(f"{code}: {status_code_count[code]}")
 
 
-def signal_handler(sig, frame):
-    """
-    Handles the keyboard interrupt signal (CTRL + C).
-    """
-    print_stat()
-    sys.exit(0)
+# def signal_handler(sig, frame):
+#     """
+#     Handles the keyboard interrupt signal (CTRL + C).
+#     """
+#     print_stat()
+#     sys.exit(0)
 
 
-signal.signal(signal.SIGINT, signal_handler)
+# signal.signal(signal.SIGINT, signal_handler)
 
 
 for line in sys.stdin:
