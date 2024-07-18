@@ -37,7 +37,7 @@ def print_stat():
 for line in sys.stdin:
     try:
         parts = line.split()
-        if len(parts) != 10:
+        if len(parts) != 9:
             continue
         ip_adress = parts[0]
         date = parts[2] + " " + parts[3]
