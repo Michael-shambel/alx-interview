@@ -23,7 +23,6 @@ def print_stat():
             print(f"{code}: {status_code_count[code]}")
 
 
-
 for line in sys.stdin:
     try:
         parts = line.split()
