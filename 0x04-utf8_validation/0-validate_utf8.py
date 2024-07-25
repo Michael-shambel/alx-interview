@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 method that determine if a given data set represents a calid UTF - 8
 encoding
@@ -10,8 +10,6 @@ def validUTF8(data):
     this method check the data is UTF - 8 coding
     """
     n_bytes = 0
-    # mask1 = 1 << 7
-    # mask2 = 1 << 6
 
     for num in data:
         bitRep = format(num, '#010b')[-8:]
