@@ -3,6 +3,7 @@
 matrix island
 """
 
+
 def island_perimeter(grid):
     """
     findig the perimwerter of island
@@ -18,7 +19,7 @@ def island_perimeter(grid):
         if c == len(grid[r]) - 1 or grid[r][c + 1] == 0:
             perimeter += 1
         return perimeter
-    
+
     finalPerimeter = 0
     for i in range(len(grid)):
         for j in range(len(grid[i])):
