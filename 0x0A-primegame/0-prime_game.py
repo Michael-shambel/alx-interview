@@ -5,6 +5,14 @@ Prime Game
 
 
 def isWinner(x, nums):
+    """
+    determine the winner of the game a set of prime number removal
+    arags:
+        x: number of round
+        nums: number of array
+    return:
+        winner of the game
+    """
     if not nums or x <= 0:
         return None
 
